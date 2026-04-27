@@ -4,6 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
+  // ✅ GitHub Pages only needs base in production build for GH
+  base: mode === "production" ? "/portfolio-/" : "/",
+
   server: {
     host: "::",
     port: 8080,
