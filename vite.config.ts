@@ -3,23 +3,27 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-export default defineConfig(({ mode }) => ({
-  // ✅ GitHub Pages only needs base in production build for GH
-  base: mode === "production" ? "/portfolio-/" : "/",
+export default defineConfig(({ mode }) => {
+  // 👇 only true when building for GitHub Pages
+  const isGitHubPages = process.env.VITE_GITHUB_PAGES === "true";
 
-  server: {
-    host: "::",
-    port: 8080,
-  },
+  return {
+    base: isGitHubPages ? "/portfolio-/" : "/",
 
-  plugins: [
-    react(),
-    mode === "development" && componentTagger()
-  ].filter(Boolean),
-
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+    server: {
+      host: "::",
+      port: 8080,
     },
-  },
-}));
+
+    plugins: [
+      react(),
+      mode === "development" && componentTagger()
+    ].filter(Boolean),
+
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
+  };
+});
