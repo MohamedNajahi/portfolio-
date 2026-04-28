@@ -39,17 +39,17 @@ const About = () => {
               visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
             }`}
           >
-            <div className="aspect-square max-w-md mx-auto rounded-2xl overflow-hidden relative group">
+            <div className="aspect-square max-w-md mx-auto rounded-2xl overflow-hidden relative group transition-all duration-500 hover:scale-[1.02] hover:-rotate-1 hover:shadow-2xl">
               {/* Photo */}
               <img 
                 src={mohamedPhoto} 
                 alt="Mohamed Najahi - AI Developer and Computer Science Student"
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
               />
               
               {/* Overlay gradient for style */}
               <div 
-                className="absolute inset-0 opacity-30 mix-blend-overlay pointer-events-none"
+                className="absolute inset-0 opacity-30 mix-blend-overlay pointer-events-none transition-opacity duration-500 group-hover:opacity-60"
                 style={{
                   background: 'linear-gradient(135deg, hsl(var(--primary) / 0.3) 0%, transparent 50%, hsl(var(--secondary) / 0.2) 100%)'
                 }}
@@ -57,12 +57,12 @@ const About = () => {
 
               {/* Border glow effect */}
               <div 
-                className="absolute -inset-1 rounded-2xl opacity-40 blur-xl -z-10 animate-glow-pulse"
+                className="absolute -inset-1 rounded-2xl opacity-40 blur-xl -z-10 animate-glow-pulse transition-opacity duration-500 group-hover:opacity-80"
                 style={{ background: 'var(--gradient-cyan)' }}
               />
               
               {/* Frame border */}
-              <div className="absolute inset-0 rounded-2xl border-2 border-primary/20 pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl border-2 border-primary/20 pointer-events-none transition-colors duration-500 group-hover:border-primary/60" />
             </div>
           </div>
 
