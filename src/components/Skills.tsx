@@ -119,19 +119,39 @@ const Skills = () => {
 
         {/* Skills grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {skillCategories.map((category, categoryIndex) => (
+          {skillCategories.map((category, categoryIndex) => {
+            const isPrimary = categoryIndex % 2 === 0;
+            const accent = isPrimary ? 'primary' : 'secondary';
+            return (
             <div
               key={category.title}
-              className={`transition-all duration-700 ${
+              className={`group/cat relative p-6 rounded-2xl border border-border/40 bg-card/30 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-${accent}/50 hover:shadow-[0_20px_50px_-15px_hsl(var(--${accent})/0.4)] ${
                 visible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${categoryIndex * 100}ms` }}
             >
+              {/* Glow effect on hover */}
+              <div
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover/cat:opacity-100 transition-opacity duration-500 pointer-events-none -z-10 blur-2xl"
+                style={{
+                  background: isPrimary
+                    ? 'radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.25), transparent 70%)'
+                    : 'radial-gradient(circle at 50% 0%, hsl(var(--secondary) / 0.25), transparent 70%)',
+                }}
+              />
+
               {/* Category title */}
-              <h3 className="font-display font-bold text-lg text-foreground mb-6 pb-3 border-b border-border">
-                {category.title}
+              <h3
+                className="font-display font-bold text-lg text-foreground mb-6 pb-3 border-b border-border transition-colors duration-300"
+                style={{
+                  color: undefined,
+                }}
+              >
+                <span className={`transition-colors duration-300 group-hover/cat:text-${accent}`}>
+                  {category.title}
+                </span>
               </h3>
 
               {/* Skills list */}
@@ -139,22 +159,38 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span
                     key={skill}
-                    className={`px-3 py-1.5 rounded-full text-sm font-display transition-all duration-500 ${
+                    className={`px-3 py-1.5 rounded-full text-sm font-display cursor-default transition-all duration-300 hover:scale-110 hover:-translate-y-0.5 hover:shadow-lg ${
                       visible
                         ? 'opacity-100 scale-100'
                         : 'opacity-0 scale-90'
                     }`}
                     style={{ 
                       transitionDelay: `${categoryIndex * 100 + skillIndex * 50}ms`,
-                      background: categoryIndex === 0 || categoryIndex === 1 
+                      background: isPrimary
                         ? 'hsl(var(--primary) / 0.1)' 
                         : 'hsl(var(--secondary) / 0.1)',
-                      color: categoryIndex === 0 || categoryIndex === 1 
+                      color: isPrimary
                         ? 'hsl(var(--primary))' 
                         : 'hsl(var(--secondary))',
-                      border: `1px solid ${categoryIndex === 0 || categoryIndex === 1 
+                      border: `1px solid ${isPrimary
                         ? 'hsl(var(--primary) / 0.2)' 
                         : 'hsl(var(--secondary) / 0.2)'}`,
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = isPrimary
+                        ? 'hsl(var(--primary) / 0.25)'
+                        : 'hsl(var(--secondary) / 0.25)';
+                      e.currentTarget.style.borderColor = isPrimary
+                        ? 'hsl(var(--primary) / 0.6)'
+                        : 'hsl(var(--secondary) / 0.6)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = isPrimary
+                        ? 'hsl(var(--primary) / 0.1)'
+                        : 'hsl(var(--secondary) / 0.1)';
+                      e.currentTarget.style.borderColor = isPrimary
+                        ? 'hsl(var(--primary) / 0.2)'
+                        : 'hsl(var(--secondary) / 0.2)';
                     }}
                   >
                     {skill}
