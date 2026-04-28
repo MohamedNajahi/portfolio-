@@ -2,48 +2,92 @@ import { useEffect, useRef, useState } from "react";
 
 const skillCategories = [
   {
-    title: "AI & Machine Learning",
+    title: "🧠 AI / Machine Learning",
     skills: [
-      "Fine-tuning LLMs",
-      "RAG Pipelines",
-      "OpenAI",
-      "Hugging Face",
-      "LangChain",
-      "Computer Vision",
-      "NLP",
+      "Supervised & Unsupervised Learning",
+      "Deep Learning (CNNs, Transformers)",
+      "Model Training, Evaluation & Optimization",
+      "Feature Engineering & Data Preprocessing",
     ],
   },
   {
-    title: "AI Agents & Frameworks",
+    title: "🤖 Generative AI & LLMs",
     skills: [
+      "Prompt Engineering & Optimization",
+      "RAG Pipelines (Retrieval-Augmented Generation)",
+      "LLM Fine-tuning (LoRA basics)",
+      "Structured Outputs & Hallucination Reduction",
+    ],
+  },
+  {
+    title: "🧩 AI Agents & Frameworks",
+    skills: [
+      "LangChain",
       "LangGraph",
-      "CrewAI",
       "Autogen",
+      "CrewAI",
+      "Tool Integration & Agent Workflows",
+    ],
+  },
+  {
+    title: "⚙️ ML Frameworks & Libraries",
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "Transformers",
+    ],
+  },
+  {
+    title: "🔍 NLP & Computer Vision",
+    skills: [
+      "Text Processing, Embeddings, Semantic Search",
+      "Object Detection & Real-time Vision Systems",
       "OpenCV",
       "MediaPipe",
-      "TensorFlow",
     ],
   },
   {
-    title: "Development",
+    title: "🧠 RAG & Vector Systems",
     skills: [
-      "Python",
+      "Vector Databases (FAISS, MongoDB)",
+      "Similarity Search & Retrieval Optimization",
+      "Chunking & Re-ranking Techniques",
+    ],
+  },
+  {
+    title: "🌐 Backend & Full-Stack",
+    skills: [
+      "FastAPI (API Development)",
+      "React",
       "JavaScript",
       "TypeScript",
-      "React",
-      "Chrome Extensions",
-      "IoT Systems",
-      "Firebase",
+      "Chrome Extension Development",
     ],
   },
   {
-    title: "Mindset",
+    title: "☁️ Cloud, IoT & Data",
     skills: [
-      "Real-world AI Products",
-      "Model Optimization",
-      "Structured Metrics",
-      "Research to Production",
-      "Continuous Learning",
+      "Firebase",
+      "Cloud Deployment (Render/Vercel)",
+      "ESP32 & Real-time IoT Systems",
+      "Pandas, NumPy, Data Pipelines",
+    ],
+  },
+  {
+    title: "⚡ Performance, Safety & Production",
+    skills: [
+      "Model Optimization & Inference Tuning",
+      "Prompt Injection Protection & PII Handling",
+      "Output Validation, Retry & Logging Systems",
+    ],
+  },
+  {
+    title: "🧠 Engineering Practices",
+    skills: [
+      "End-to-End AI System Design",
+      "Research → Production Workflow",
+      "Clean Code, Debugging & Scalability",
     ],
   },
 ];
