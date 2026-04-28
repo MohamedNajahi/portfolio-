@@ -11,9 +11,9 @@
     --background: 165 38% 87%;          /* #D1E8E2 pale mint */
     --foreground: 165 9% 18%;           /* #2C3531 forest charcoal */
 
-    /* Depth layers (replacing "midnight") */
-    --midnight: 165 9% 18%;             /* #2C3531 deep forest */
-    --midnight-deep: 165 12% 12%;       /* deeper forest */
+    /* Depth layers — light surfaces in light mode so dark text stays readable */
+    --midnight: 175 28% 78%;            /* soft tealed mint surface */
+    --midnight-deep: 175 30% 70%;       /* deeper tealed mint surface */
 
     /* Primary - Rich Teal (Interaction layer) */
     --primary: 181 71% 23%;             /* #116466 */
