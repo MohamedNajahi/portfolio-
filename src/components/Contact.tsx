@@ -27,28 +27,28 @@ const Contact = () => {
             {/* Email */}
             <a
               href="mailto:mnajahi887@gmail.com"
-              className="group flex items-center gap-4 px-8 py-5 glass rounded-xl hover:border-primary/50 transition-all"
+              className="group flex items-center gap-4 px-8 py-5 glass rounded-xl border border-transparent hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.5)] transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Mail className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <Mail className="w-6 h-6 text-primary group-hover:animate-pulse" />
               </div>
               <div className="text-left">
                 <p className="label-text text-muted-foreground text-xs mb-1">Email</p>
-                <p className="font-display font-medium text-foreground">mnajahi887@gmail.com</p>
+                <p className="font-display font-medium text-foreground group-hover:text-primary transition-colors">mnajahi887@gmail.com</p>
               </div>
             </a>
 
             {/* Phone */}
             <a
               href="tel:+94769159107"
-              className="group flex items-center gap-4 px-8 py-5 glass rounded-xl hover:border-secondary/50 transition-all"
+              className="group flex items-center gap-4 px-8 py-5 glass rounded-xl border border-transparent hover:border-secondary/50 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_hsl(var(--secondary)/0.5)] transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
-                <Phone className="w-6 h-6 text-secondary" />
+              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">
+                <Phone className="w-6 h-6 text-secondary group-hover:animate-pulse" />
               </div>
               <div className="text-left">
                 <p className="label-text text-muted-foreground text-xs mb-1">Phone</p>
-                <p className="font-display font-medium text-foreground">+94 76 915 9107</p>
+                <p className="font-display font-medium text-foreground group-hover:text-secondary transition-colors">+94 76 915 9107</p>
               </div>
             </a>
           </div>
@@ -59,18 +59,18 @@ const Contact = () => {
               href="https://github.com/MohamedNajahi"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-3 rounded-full bg-muted/50 hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+              className="group flex items-center gap-3 px-6 py-3 rounded-full bg-muted/50 hover:bg-primary/10 hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 text-muted-foreground hover:text-primary"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               <span className="font-display font-medium">GitHub</span>
             </a>
             <a
               href="https://www.linkedin.com/in/mohamed-najahi"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-3 rounded-full bg-muted/50 hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+              className="group flex items-center gap-3 px-6 py-3 rounded-full bg-muted/50 hover:bg-secondary/10 hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 text-muted-foreground hover:text-secondary"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-5 h-5 group-hover:-rotate-12 transition-transform duration-300" />
               <span className="font-display font-medium">LinkedIn</span>
             </a>
           </div>
@@ -79,7 +79,7 @@ const Contact = () => {
           <div>
             <a
               href="mailto:mnajahi887@gmail.com"
-              className="inline-flex items-center gap-3 px-10 py-5 rounded-full font-display font-bold text-lg transition-all group"
+              className="inline-flex items-center gap-3 px-10 py-5 rounded-full font-display font-bold text-lg transition-all duration-300 group hover:scale-105 hover:shadow-[0_0_60px_hsl(var(--primary)/0.6)]"
               style={{
                 background: 'var(--gradient-cyan)',
                 color: 'hsl(var(--primary-foreground))',
@@ -87,7 +87,7 @@ const Contact = () => {
               }}
             >
               <span>Send an Email</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
             </a>
             <p className="mt-4 text-sm text-muted-foreground">
               Or just say hello—I read every message.
