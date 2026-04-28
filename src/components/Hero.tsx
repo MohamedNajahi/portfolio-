@@ -217,28 +217,26 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Role tagline */}
-          <div className="opacity-0 animate-fade-up delay-200">
-            <p className="font-display text-xl md:text-2xl lg:text-3xl font-medium">
-              <span className="text-primary">AI & ML Engineer</span>
-              <span className="text-muted-foreground mx-3">|</span>
-              <span className="text-secondary">Entrepreneur</span>
-              <span className="text-muted-foreground mx-3">|</span>
-              <span className="text-foreground">Builder</span>
-            </p>
-          </div>
+        {/* Role tagline */}
+        <div className="opacity-0 animate-fade-up delay-200">
+          <p className="font-display text-xl md:text-2xl lg:text-3xl font-medium">
+            <span className="text-primary">AI/ML Engineer</span>
+            <span className="text-muted-foreground mx-2 md:mx-3">|</span>
+            <span className="text-secondary">Data Science & Analytics Enthusiast</span>
+            <span className="text-muted-foreground mx-2 md:mx-3">|</span>
+            <span className="text-foreground">Builder of Real-World AI Systems</span>
+          </p>
+        </div>
 
-          {/* Main description */}
-          <div className="opacity-0 animate-fade-up delay-400 pt-6">
-            <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Creating real-world{" "}
-              <span className="text-foreground font-medium">AI</span>
-              {" "}and{" "}
-              <span className="text-foreground font-medium">embedded solutions</span>
-              {" "}that make an impact in{" "}
-              <span className="text-secondary font-medium">Sri Lanka</span>.
-            </p>
-          </div>
+        {/* Main description */}
+        <div className="opacity-0 animate-fade-up delay-400 pt-6">
+          <p className="body-large text-muted-foreground max-w-2xl mx-auto">
+            Focused on{" "}
+            <span className="text-primary font-medium">practical</span>,{" "}
+            <span className="text-secondary font-medium">scalable</span>, and{" "}
+            <span className="text-foreground font-medium">impactful solutions</span>.
+          </p>
+        </div>
         </div>
       </div>
 
