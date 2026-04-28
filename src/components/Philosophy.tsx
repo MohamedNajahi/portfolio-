@@ -97,7 +97,7 @@ const Philosophy = () => {
                 </p>
 
                 {/* Highlight quote */}
-                <p className="text-lg font-body italic text-secondary">
+                <p className="text-lg font-body italic text-red-950">
                   "{pillar.highlight}"
                 </p>
               </div>
