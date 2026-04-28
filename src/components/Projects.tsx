@@ -157,7 +157,7 @@ const Projects = () => {
                 </div>
 
                 {/* Hook */}
-                <p className="body-large text-foreground font-medium">
+                <p className="body-large text-primary font-medium">
                   {project.hook}
                 </p>
 

@@ -84,7 +84,7 @@ const About = () => {
                 I'm Mohamed Najahi, a 3rd-year Computer Science with AI student at the National Institute of Business Management in Sri Lanka.
               </p>
               <p className="body-text text-muted-foreground">
-                I've also had the opportunity to apply my knowledge in a real-world environment through a <span className="text-secondary font-medium">6-month AI/ML internship</span>, where I worked on practical systems beyond academic projects.
+                I've also had the opportunity to apply my knowledge in a real-world environment through a <span className="font-medium text-red-950">6-month AI/ML internship</span>, where I worked on practical systems beyond academic projects.
               </p>
             </div>
 
@@ -97,7 +97,7 @@ const About = () => {
                 <span className="text-primary font-medium">I like learning deeply.</span> I don't rush through topics. I take time to understand how things really work.
               </p>
               <p>
-                <span className="text-secondary font-medium">I focus on solving real problems,</span> not showing off skills. My goal is to create useful solutions that have a positive impact.
+                <span className="font-medium text-red-950">I focus on solving real problems,</span> not showing off skills. My goal is to create useful solutions that have a positive impact.
               </p>
             </div>
 

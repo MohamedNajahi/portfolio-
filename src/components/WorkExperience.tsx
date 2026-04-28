@@ -246,7 +246,7 @@ const WorkExperience = () => {
               <p>
                 I worked on AI-driven solutions designed to solve practical
                 business problems—where{" "}
-                <span className="text-secondary font-medium">
+                <span className="font-medium text-red-950">
                   performance, reliability, and usability
                 </span>{" "}
                 mattered just as much as correctness.
@@ -254,7 +254,7 @@ const WorkExperience = () => {
               <p>
                 This experience taught me something critical: building for the
                 real world is not just about models—it's about{" "}
-                <span className="text-foreground font-medium">
+                <span className="text-primary font-medium">
                   integration, collaboration, and continuous improvement.
                 </span>
               </p>
