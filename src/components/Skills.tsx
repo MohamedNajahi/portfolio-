@@ -125,7 +125,11 @@ const Skills = () => {
             return (
             <div
               key={category.title}
-              className={`group/cat relative p-6 rounded-2xl border border-border/40 bg-card/30 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-${accent}/50 hover:shadow-[0_20px_50px_-15px_hsl(var(--${accent})/0.4)] ${
+              className={`group/cat relative p-6 rounded-2xl border bg-card/30 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 ${
+                isPrimary
+                  ? 'border-border/40 hover:border-primary/50 hover:shadow-[0_20px_50px_-15px_hsl(var(--primary)/0.4)]'
+                  : 'border-border/40 hover:border-secondary/50 hover:shadow-[0_20px_50px_-15px_hsl(var(--secondary)/0.4)]'
+              } ${
                 visible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-12'
@@ -143,13 +147,8 @@ const Skills = () => {
               />
 
               {/* Category title */}
-              <h3
-                className="font-display font-bold text-lg text-foreground mb-6 pb-3 border-b border-border transition-colors duration-300"
-                style={{
-                  color: undefined,
-                }}
-              >
-                <span className={`transition-colors duration-300 group-hover/cat:text-${accent}`}>
+              <h3 className="font-display font-bold text-lg text-foreground mb-6 pb-3 border-b border-border transition-colors duration-300">
+                <span className={`transition-colors duration-300 ${isPrimary ? 'group-hover/cat:text-primary' : 'group-hover/cat:text-secondary'}`}>
                   {category.title}
                 </span>
               </h3>
