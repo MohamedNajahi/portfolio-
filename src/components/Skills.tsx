@@ -198,7 +198,8 @@ const Skills = () => {
                 ))}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
